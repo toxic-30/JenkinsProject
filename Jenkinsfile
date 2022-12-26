@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'make' 
+                sh'make' 
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
             }
         }
@@ -15,7 +15,7 @@ pipeline {
               }
             }
             steps {
-                bat 'make publish'
+                sh'make publish'
             }
         }
     }
