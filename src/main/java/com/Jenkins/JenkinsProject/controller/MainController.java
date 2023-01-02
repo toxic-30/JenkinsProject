@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController 
 {
 	@RequestMapping("/")
-	static String message()
+	public static String message()
 	{
 		return("Good Morning");
 	}
