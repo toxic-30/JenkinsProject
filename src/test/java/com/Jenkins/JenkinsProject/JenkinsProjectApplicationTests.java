@@ -7,7 +7,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 class JenkinsProjectApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
+	public void testcontroller()
+	{
+		MainController maincontroller = new MainController();
+		String result = maincontroller.message();
+		assertEquals(result, "Good Morning");
+	}	
+		
+		
 
 }
